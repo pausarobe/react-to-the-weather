@@ -22,7 +22,6 @@ class WeatherHome extends Component {
     componentWillMount() {
         ApiService.getAllCities()
             .then(res => {
-                console.log('res', res);
                 this.setState({allCities: this.sortCities(res)})
             })
             .catch(err => console.error(err))
@@ -37,8 +36,6 @@ class WeatherHome extends Component {
     }
 
     onSelectedValue(newValue) {
-        console.log('onSelectedValue', newValue);
-        console.log('state', this.state.allCities);
         if (newValue) {
             const selectedCity = this.state.allCities.find(f => f.name === newValue);
             this.setState({citySelected: selectedCity, showWeek: true});

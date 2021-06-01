@@ -42,7 +42,6 @@ class Backoffice extends Component {
         this.setState({loading: true});
         ApiService.createCity(newCity)
             .then(res => {
-                console.log('newCity', res);
                 this.load();
             })
             .catch(err => console.error(err))
@@ -52,7 +51,6 @@ class Backoffice extends Component {
         this.setState({loading: true});
         ApiService.deleteCity(row.id)
             .then(res => {
-                console.log('deleted', res);
                 this.load();
             })
             .catch(err => console.error(err))
@@ -62,7 +60,6 @@ class Backoffice extends Component {
         this.setState({loading: true});
         ApiService.getAllCities()
             .then(res => {
-                console.log('res', res);
                 this.setState({allCities: this.sortCities(res), loading: false})
             })
             .catch(err => console.error(err))
@@ -88,9 +85,9 @@ class Backoffice extends Component {
                                     <TableCell component="th" scope="row">{row.name}</TableCell>
                                     <TableCell>{row.ca}</TableCell>
                                     <TableCell>
-                                        <IconButton aria-label="edit" size="small">
+                                        {/* <IconButton aria-label="edit" size="small">
                                             <EditIcon />
-                                        </IconButton>
+                                        </IconButton> */}
                                         <IconButton aria-label="delete" size="small" onClick={() => this.onDelete(row)}>
                                             <DeleteIcon />
                                         </IconButton>

@@ -14,18 +14,18 @@ mongoose.connect(uri, { useNewUrlParser: true, useFindAndModify: false })
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err));
 
-mongoose.set("debug", function(coll, method, query, doc) {
-    console.log(
-        new Date(),
-        coll +
-        " " +
-        method +
-        " " +
-        JSON.stringify(query) +
-        " " +
-        JSON.stringify(doc)
-    );
-});
+// mongoose.set("debug", function(coll, method, query, doc) {
+//     console.log(
+//         new Date(),
+//         coll +
+//         " " +
+//         method +
+//         " " +
+//         JSON.stringify(query) +
+//         " " +
+//         JSON.stringify(doc)
+//     );
+// });
 
 const logic = new(require('./logic/Logic'));
 
@@ -44,12 +44,10 @@ app.get('/api/week/:id', (req, res) => {
 })
 
 app.post('/api/city', (req, res) => {
-    console.log('body', req.body);
     const {newCity} = req.body;
 
     logic.createCity(newCity)
         .then(city => {
-            console.log('pere', city);
             return res.json(city)
         })
         .catch(err => res.json(err))

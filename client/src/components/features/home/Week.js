@@ -39,14 +39,12 @@ class Week extends Component {
     componentDidMount() {
         ApiService.getWeatherWeek(this.props.selectedCity.id)
             .then(res => {
-                console.log('res', res);
                 this.setState({weekWeather: res[0].weather})
             })
             .catch(err => console.error(err))
     }
 
     onWeekDetail(detail) {
-        console.log('onWeekDetail', detail);
         const hourlyData = [];
         hours.forEach(hour => {
             hourlyData.push({
@@ -56,7 +54,7 @@ class Week extends Component {
                 precipitation: Math.floor((Math.random() * (100 - 0) + 0))
             })
         })
-        console.log('hourlyData', hourlyData);
+        
         const allWindDay = [];
         const allPrecipitationDay = [];
         hourlyData.forEach(item => {

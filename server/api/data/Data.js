@@ -28,7 +28,6 @@ class Data {
     deleteCity(id) {
         return City.remove({id})
             .then(() => {
-                console.log('entras?', id);
                 return this.deleteWeather(id);
             });
     }

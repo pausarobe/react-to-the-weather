@@ -12,7 +12,6 @@ class Logic {
     createCity(newCity) {
         // TODO: mejorar forma de generar un id unico
         newCity.id = new Date();
-        console.log('createCity', newCity);
         return data.createCity(newCity, this.createWeekWeather(newCity.id));
     }
 
