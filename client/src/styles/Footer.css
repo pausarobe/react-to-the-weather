@@ -1,0 +1,15 @@
+footer {
+    background-color: #0074c4;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    text-align: center;
+    color: white;
+    display: flex;
+}
+
+.footer {
+    margin: auto;
+}

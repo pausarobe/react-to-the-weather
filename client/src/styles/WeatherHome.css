@@ -1,0 +1,42 @@
+.weather-home {
+    padding: 1rem 2rem 3rem 2rem;
+}
+
+.weather-home__city {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-home__city__name {
+    font-size: 3rem;
+}
+
+.weather-home__city__ca {
+    text-align: end;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #4fafff !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #4fafff !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .weather-home {
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    .weather-home__city {
+        display: block
+    }
+
+    .weather-home__city__name {
+        font-size: 2rem;
+    }
+
+    .MuiFormControl-marginNormal {
+        margin-top: 0 !important;
+    }
+}

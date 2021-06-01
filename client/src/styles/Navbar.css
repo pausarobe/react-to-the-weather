@@ -1,0 +1,46 @@
+.MuiAppBar-colorPrimary {
+    background-color: #0074c4 !important;
+}
+
+.navbar {
+    padding-top: 0.25rem;
+    justify-content: space-between;
+}
+
+.navbar__left {
+    display: flex;
+}
+
+.navbar-title {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin: auto 1rem;
+}
+
+.navbar-backoffice {
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+}
+
+.logo {
+    width: 7rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 3rem;
+        margin-top: 0.5rem;
+    }
+
+    .navbar {
+        padding-bottom: 0.25rem;
+    }
+
+    .navbar-title {
+        font-size: 1.5rem;
+        margin: auto 0 auto 0.5rem;
+        line-height: 1.5rem;
+    }
+}
