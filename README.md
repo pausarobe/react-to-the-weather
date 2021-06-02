@@ -14,13 +14,17 @@ React to the Weather es una prueba de concepto MERN (Mongo + Express + React + N
 
 Para correr el proyecto en local seguir los siguientes pasos:
 
-1) Clonar el repositorio: git clone https://github.com/pausarobe/react-to-the-weather.git
-2) Primero vamos a ejecutar el backend. Acceder a la carpeta: cd react-to-the-weather/server/api
-3) Instalad las dependencias: npm install
-4) Ejecutar el Backend: node api.js
-2) Para ejecutar el frontend volver a la raiz. Acceder a la carpeta: cd react-to-the-weather/client
-3) Instalar las dependencias: npm install
-4) Ejecutar el Front: npm start
+1) Clonar el repositorio: *git clone https://github.com/pausarobe/react-to-the-weather.git*
+2) Primero vamos a ejecutar el frontend. Acceder a la carpeta: *cd react-to-the-weather/client*
+3) Instalar las dependencias: *npm install*
+4) Ejecutar el front: *npm start*
+
+Actualmente el front está llamando a la API alojada en Heroku. Si se quiere cambiar para llamar contra el backend en local hay que seguir los siguientes pasos:
+
+1) Acceder al archivo *http-common.js* situado en la ruta *client/src* y cambiar el param baseURL por: *http://localhost:8080/api*
+2) Acceder a la backend desde la raiz: *cd react-to-the-weather/server/api*
+3) Instalar las dependencias: *npm install*
+4) Ejecutar el back: *node api.js*
 
 
 ### Otras consideraciones
