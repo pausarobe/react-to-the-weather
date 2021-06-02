@@ -16,7 +16,7 @@ class Data {
         })
     }
 
-    createCity = (newCity, newWeek) => {
+    createCity(newCity, newWeek) {
         const city = new City({...newCity});
 
         return city.save()
